@@ -209,7 +209,10 @@ if __name__ == '__main__':
                         break
                     else:
                         if trycount == 3:
-                            print("Max chances used. The letter is ", random_letter.lower())
+                            if args.r == 'word':
+                                print("Max chances used. The word is: ", random_letter.lower())
+                            else:
+                                print("Max chances used. The alphanum is: ", random_letter.lower())
                             check = 'n'
                             break
                         check = input("OOPS... wanna try again (y|n) ? ")
